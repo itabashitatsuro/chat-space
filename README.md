@@ -39,7 +39,7 @@ belongs_to :user
 
 |Column|Type|Options|
 |------|----|-------|
-|image|text|null: false|
+|image|text||
 |body|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
