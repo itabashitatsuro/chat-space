@@ -1,14 +1,13 @@
-
-
 .contents
   .contents__side-bar
     .side-hedear
       .side-header-space 
-        .user-name Masa
+        .user-name 
+          = current_user.name
         .menu__new-group
           = link_to "#", class: "menu__btn, menu__btn--edit" do
             = icon('fab', 'edit', class: "menu__btn--icon")
-          = link_to "#", class: "menu__btn, menu__btn--cog" do
+          = link_to edit_user_path(current_user), class: "menu__btn, menu__btn--cog" do
             = icon('fas', 'cog', class: "menu__btn--icon")
     .side-box
       .side-box__group-name TECH::CAMP
