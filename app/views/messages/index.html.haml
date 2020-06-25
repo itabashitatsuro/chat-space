@@ -1,52 +1,48 @@
-%html
-  %head
-    %meta{"charset":"UTF-8"}
-    %link{"href": "style.scss", "rel": "stylesheet"}
-    %title chat-space
-  %body
-    .contents
-      .contents__side-bar
-        .side-hedear
-          .side-header-space 
-            .user-name Masa
-            .menu__new-group
-              = link_to "#", class: "menu__btn, menu__btn--edit" do
-                = icon('fab', 'edit', class: "menu__btn--icon")
-              = link_to "#", class: "menu__btn, menu__btn--cog" do
-                = icon('fas', 'cog', class: "menu__btn--icon")
-        .side-box
-          .side-box__group-name TECH::CAMP
-          .side-box__message まだメッセージがありません
-      .contents__main-bar
-        .main-header
-          .header-left
-            .header-left__group-name グループ
-            .header-left__member-lists Member:
-          .head-right
-            .head-right__exit-btn 
-            = link_to "#", class: "head-right__btn" do
-              Edit
-        .main-box
-          .groups
-            .group
-              .group__member-name-date
-                .name Masa
-                .date 2019/1/20(Wed)17:43:01 
-              .group__member-message 
-                おはよう！
-            .group
-              .group__member-name-date
-                .name Taka
-                .date 2019/1/20(Wed)17:43:34
-              .group__member-message
-                おはようございます！
-        .main-fooder
-          .form
-            %form.new-massages
-              .input-box
-                %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-                %label{class: "input-box__image"}
-                  = icon('fas', 'image')
-                  %input{type:"file", class:"input-box__image__file"}
-              %input{type: "submit", class: "submit-btn"}
+
+
+.contents
+  .contents__side-bar
+    .side-hedear
+      .side-header-space 
+        .user-name Masa
+        .menu__new-group
+          = link_to "#", class: "menu__btn, menu__btn--edit" do
+            = icon('fab', 'edit', class: "menu__btn--icon")
+          = link_to "#", class: "menu__btn, menu__btn--cog" do
+            = icon('fas', 'cog', class: "menu__btn--icon")
+    .side-box
+      .side-box__group-name TECH::CAMP
+      .side-box__message まだメッセージがありません
+  .contents__main-bar
+    .main-header
+      .header-left
+        .header-left__group-name グループ
+        .header-left__member-lists Member:
+      .head-right
+        .head-right__exit-btn 
+        = link_to "#", class: "head-right__btn" do
+          Edit
+    .main-box
+      .groups
+        .group
+          .group__member-name-date
+            .name Masa
+            .date 2019/1/20(Wed)17:43:01 
+          .group__member-message 
+            おはよう！
+        .group
+          .group__member-name-date
+            .name Taka
+            .date 2019/1/20(Wed)17:43:34
+          .group__member-message
+            おはようございます！
+    .main-fooder
+      .form
+        %form.new-massages
+          .input-box
+            %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+            %label{class: "input-box__image"}
+              = icon('fas', 'image')
+              %input{type:"file", class:"input-box__image__file"}
+          %input{type: "submit", class: "submit-btn"}
           
