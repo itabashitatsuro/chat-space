@@ -1,0 +1,33 @@
+.contents__main-chat
+  .main-header
+    .header-left
+      .header-left__group-name グループ
+      .header-left__member-lists Member:
+    .head-right
+      .head-right__exit-btn 
+      = link_to "#", class: "head-right__btn" do
+        Edit
+  .main-box
+    .groups
+      .group
+        .group__member-name-date
+          .name Masa
+          .date 2019/1/20(Wed)17:43:01 
+        .group__member-message 
+          おはよう！
+      .group
+        .group__member-name-date
+          .name Taka
+          .date 2019/1/20(Wed)17:43:34
+        .group__member-message
+          おはようございます！
+  .main-fooder
+    .form
+      %form.new-massages
+        .input-box
+          %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+          %label{class: "input-box__image"}
+            = icon('fas', 'image')
+            %input{type:"file", class:"input-box__image__file"}
+        %input{type: "submit", class: "submit-btn"}
+          
