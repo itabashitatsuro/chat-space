@@ -5,11 +5,13 @@
       %ul
         - group.errors.full_messages.each do |message|
           %li= message
+  
   .SettingGroupForm__field
     .SettingGroupForm__leftField
       = f.label :name, "グループ名", class: 'SettingGroupForm__label'
     .SettingGroupForm__rightField
       = f.text_field :name, class: 'SettingGroupForm__input', placeholder: 'グループ名を入力してください'
+  
   .SettingGroupForm__field
     .SettingGroupForm__leftField
       %label.SettingGroupForm__label チャットメンバーを追加
@@ -17,6 +19,7 @@
       / グループ作成機能の追加時はここにcollection_check_boxesの記述を入れてください
       = f.collection_check_boxes :user_ids, User.all, :id, :name
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
+  
   .SettingGroupForm__field
     .SettingGroupForm__leftField
     .SettingGroupForm__rightField

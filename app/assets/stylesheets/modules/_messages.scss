@@ -2,28 +2,30 @@
   box-sizing: border-box;
 }
 
-.contents{
-  height: 100vw;
+.wrapper{
   width: 100vw;
   display: flex;
-  &__side-bar {
+  &__side-bar{
     width: 300px;
+    height: 100vw;
+  }
+  &__main-chat{
+    width: calc(100vw - 300px);
+    height: 100vw;
   }
 
-  .side-hedear{
+  .side-header{ 
     height: 100px;
     padding:0 20px;
     display: flex;
     align-items: center;
-    background-color: #253141;
+    background-color:#253141;
   }  
 
-  .side-header-space {
+  .side-header-space{
     height: 20px;
     width: 260px;
-    margin:0 20px;
     font-size: 16px;
-    font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,12 +45,15 @@
       }
     }  
   }
-
+  
   .side-box{
     height: calc(100vh - 100px);
-    padding:0 20px;
     background-color: #2f3e51;
-    &__group-name{
+  }
+   
+  .Group{
+    padding:0 20px;
+    &__name{
       color: #ffffff;
       padding: 20px 0 5px 0;
       font-size: 15px;
@@ -58,83 +63,85 @@
       color: #ffffff;
       margin-bottom: 46px;
       font-size: 11px;
+      font-weight: bold;
     }
   }
-  &__main-bar {
-    width: calc(100vw - 300px);
-  }
-
+  //メインチャットのヘッダー
   .main-header{
     height: 100px;
-    width: calc(100vw - 300px);
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
-    background-color: #ffffff;
-    border-bottom: solid #eeeeee;
-  }
-
-  .header-left{
-    align-items: center;
-    &__group-name{
+    background-color:#ffffff;
+    border-bottom: 1px solid #eeeeee;
+    .header-left{
       margin: 35px 0 15px 0;
-      color: #333333;
-      font-size: 20px;
+      .group-name{
+        color: #333333;
+        font-size: 20px;
+      }
+      .member-lists{
+        color: #999999;
+        font-size: 12px;
+        list-style: none;
+      }
+    //&__group-name{
+      //color: #333333;
+      //font-size: 20px;
+    //}
+    //&__member-lists{
+      //color: #999999;
+      //font-size: 12px;
+    //}
     }
-    &__member-lists{
-      margin-bottom: 0;
-      color: #999999;
-      font-size: 12px;
-    }
-  }
-
-  .head-right{
-    height: 40px;
-    width: 72px;
-    padding: 8px 20px;
-    margin: 28px 0 32px 0;
-    border: 1px solid #38aef0;
-    font-size: 16px;
-    &__btn{
+    .header-right{
+      height: 40px;
+      width: 72px;
+      padding: 8px 20px;
+      margin: 28px 0 32px 0;
+      border: 1px solid #38aef0;
+      font-size: 16px;
+      &__btn{
       color: #38aef0;
       text-decoration: none;
+      }
     }
   }
 
-  .main-box{
+  
+
+//メインチャットのメッセージ部分
+  .MessageField{
     height: calc(100vh - 100px - 90px);
-    width: calc(100vw - 300px);
-    display: flex;
+    padding: 0 0 0 40px;
     background-color: #fafafa;
-    .group{
-      padding: 0 0 0 40px;
-      &__member-name-date{
-        display: flex;
-        justify-content: space-between;
-        padding: 35px 0 12px 0;
-        .name{
-          color: #333333;
-          font-size: 16px;
-        }
-        .date{
-          display: block;
-          color: #999999;
-          font-size: 12px;
-          text-align: right;
-        }
+    .MessageInfo{
+      background-color: #fafafa;
+      display: flex;
+      justify-content: start;
+      &__userName{
+        color: #333333;
+        font-size: 16px;
+        margin: 35px 0 12px 0;
       }
-      &__member-message{
+      &__date{
+        display: block;
+        color: #999999;
+        font-size: 12px;
+        padding: 35px 0 12px 0;
+        text-align: right;
+      }
+      .Message{
         color: #434A54;
-        margin-bottom: 46px;
         font-size: 14px;
+        margin-bottom: 46px;
       }
     }
   }
-   
+//メインチャットのヘッダー
   .main-fooder{
     height: 90px;
-    width: calc(100vw - 300px);
     background-color: #d2d2d2;
     padding: 20px 40px;
 
@@ -144,26 +151,25 @@
         display: flex;
         width: 100%;
         position: relative;
-        &__text{
+        .Form__inputContent{
           height: 50px;
           width: 100%;
           color: #434e54;
           border-style: none;
           padding: 0 40px 0 10px;
         }
-        &__image{
+        .Form__inputImage{
           position: absolute;
           top: 10px;
           right: 10px;
           cursor: pointer;
           font-size: 16px;
-          
-          &__file{
+          .Hidden{
             display: none;
           }
         }
       }
-      .submit-btn{
+      .Form__submit{
         width: 100px;
         height: 50px;
         padding: 0 30px;
