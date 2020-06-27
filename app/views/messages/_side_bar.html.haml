@@ -1,5 +1,5 @@
-.contents__side-bar
-  .side-hedear
+.wrapper__side-bar
+  .side-header
     .side-header-space 
       .user-name 
         = current_user.name
@@ -10,11 +10,11 @@
           = icon('fas', 'cog', class: "menu__btn--icon")
   .side-box
     - current_user.groups.each do |group|
-      .side-box
-        = link_to '#' do
-          .side-box__name
+      .Group
+        = link_to group_messages_path(group) do
+          .Group__name
             = group.name
-          .side-box__message
-            メッセージはまだありません
+          .Group__message
+            = group.show_last_message
 -#    .side-box__group-name TECH::CAMP
 -#    .side-box__message まだメッセージがありません

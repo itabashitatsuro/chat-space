@@ -1,5 +1,7 @@
-.contents
-  = render 'messages/side_bar'
+.wrapper
+  = render "side_bar"
+  = render "main_chat"
+
 -#  .contents__side-bar
 -#    .side-hedear
 -#       .side-header-space 
@@ -37,12 +39,11 @@
 -#          .group__member-message
 -#            おはようございます！
 -#    .main-fooder
--#      .form
--#        %form.new-massages
--#          .input-box
--#            %input{type: "text", class: "input-box__text", placeholder: "type a message"}
--#            %label{class: "input-box__image"}
--#              = icon('fas', 'image')
--#              %input{type:"file", class:"input-box__image__file"}
--#          %input{type: "submit", class: "submit-btn"}
+-#      %form.new-massages
+-#        .input-box
+-#          %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+-#          %label{class: "input-box__image"}
+-#            = icon('fas', 'image')
+-#            %input{type:"file", class:"input-box__image__file"}
+-#        %input{type: "submit", class: "submit-btn"}
           
