@@ -116,6 +116,7 @@
     height: calc(100vh - 100px - 90px);
     padding: 0 0 0 40px;
     background-color: #fafafa;
+    overflow: scroll;
     .MessageInfo{
       background-color: #fafafa;
       display: flex;
