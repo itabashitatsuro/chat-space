@@ -14,12 +14,11 @@
       .header-right__exit-btn 
       = link_to edit_group_path(@group.id), class: "head-right__btn" do
         Edit
-
   .MessageField
     = render @messages
-
+  
   .main-fooder
-    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+    = form_with model: [@group, @message], html: {class: "Form"},local: true do |f|
       .new-massages
         .input-box
           = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
