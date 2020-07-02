@@ -19,7 +19,7 @@
     = render @messages
 
   .main-fooder
-    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+    = form_with model: [@group, @message], html: {class: "Form"},local: true do |f|
       .new-massages
         .input-box
           = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
