@@ -58,12 +58,14 @@
       padding: 20px 0 5px 0;
       font-size: 15px;
       font-weight: bold;
+      text-decoration: none;
     }
     &__message{
       color: #ffffff;
       margin-bottom: 46px;
       font-size: 11px;
       font-weight: bold;
+      text-decoration: none;
     }
   }
   //メインチャットのヘッダー
@@ -103,14 +105,12 @@
       border: 1px solid #38aef0;
       font-size: 16px;
       &__btn{
-      color: #38aef0;
-      text-decoration: none;
+        color: #38aef0;
+        text-decoration: none;
       }
     }
   }
-
   
-
 //メインチャットのメッセージ部分
   .MessageField{
     height: calc(100vh - 100px - 90px);
@@ -139,6 +139,10 @@
         margin-bottom: 46px;
       }
     }
+  }
+
+  .Group-box{
+    text-decoration: none;
   }
 //メインチャットのヘッダー
   .main-fooder{
